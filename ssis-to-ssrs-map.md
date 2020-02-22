@@ -1,6 +1,8 @@
 package - executions group by time range, reportid
 
-folder - folder
+folder - folder (Type 1, "/")
+
+? - subfolder (Type 1, "/.../...")
 
 execution - execution
 
@@ -8,7 +10,7 @@ execution - execution
 
 executable - report
 
-project - report folder (first parent)
+project - path = report folder (first parent) (Type 2 and remove report name from path)
 
 package history - ExecutonLogStorage
 
