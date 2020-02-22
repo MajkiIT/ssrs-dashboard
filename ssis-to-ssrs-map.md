@@ -8,6 +8,7 @@ execution - execution
 
 executable - report
 
+project - report folder (first parent)
 
 package history - ExecutonLogStorage
 
