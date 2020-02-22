@@ -37,3 +37,14 @@ SELECT
   on ntf.SubscriptionID=sub.SubscriptionID 
   inner join [ReportServer].[dbo].[Catalog] c
   on c.ItemID = ntf.ReportID
+  
+  packages:
+  
+    Select 
+   Reportid,
+   DATEADD(MINUTE, DATEDIFF(MINUTE, '2020', timestart) / 15 * 15, '2020') AS [timestartrange], 
+   status,
+   COUNT(*)
+   from  [ReportServer].[dbo].[ExecutionLogStorage]
+  where TimeStart>=GETDATE()-2
+  group by  Reportid,   DATEADD(MINUTE, DATEDIFF(MINUTE, '2020', timestart) / 15 * 15, '2020'), status
