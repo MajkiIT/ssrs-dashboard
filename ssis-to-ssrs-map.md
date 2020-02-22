@@ -1,4 +1,4 @@
-package - executions group by time, reportid
+package - executions group by time range, reportid
 
 folder - folder
 
